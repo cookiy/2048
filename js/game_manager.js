@@ -107,7 +107,8 @@ GameManager.prototype.moveTile = function(tile, cell) {
     this.grid.cells[cell.x][cell.y] = tile;
     tile.updatePosition(cell);
 };
-
+// 
+// 
 GameManager.prototype.move = function(direction) {
     var self = this;
     if (this.isGameTerminated()) {
