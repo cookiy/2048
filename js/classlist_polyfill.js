@@ -15,7 +15,7 @@
             push.call(this, classes[i]);
         }
     };
-
+    // 
     DOMTokenList.prototype = {
         add: function(token) {
             if (this.contains(token)) {
