@@ -15,7 +15,7 @@
             push.call(this, classes[i]);
         }
     };
-    // 
+
     DOMTokenList.prototype = {
         add: function(token) {
             if (this.contains(token)) {
@@ -31,13 +31,27 @@
             return this[index] || null;
         },
         remove: function(token) {
-            // body...
+            if (!this.contains(token)) {
+                return
+            };
+            for (var i = 0; i < this.length; i++) {
+                if (this[i] == token) {
+                    break;
+                };
+            }
+            splice.call(this, i, 1);
+            this.e;.className = this.toString();
         },
         toString: function() {
-            // body...
+            return join.call(this, '');
         },
         toggle: function(token) {
-            // body...
+            if (!this.contains(token)) {
+                this.add(token);
+            } else {
+                this.remove(token);
+            }
+            return this.contains(token);
         }
     }
 })();
